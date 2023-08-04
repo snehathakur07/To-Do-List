@@ -1,0 +1,33 @@
+<footer>
+    Copyright © <%= new Date().getFullYear()%>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+            const tasks = document.querySelectorAll(".list ul li input");
+            tasks.forEach(checkbox => {
+                checkbox.checked = localStorage.getItem(checkbox.id) === 'true';
+                updateCheckbox(checkbox);
+                checkbox.addEventListener('change', () => {
+                    localStorage.setItem(checkbox.id, checkbox.checked);
+                    updateCheckbox(checkbox);
+                });
+            });
+        });
+
+        function updateCheckbox(checkbox) {
+            if (checkbox.checked) {
+                checkbox.parentNode.querySelector("p").style.textDecoration = "line-through";
+            } else {
+                checkbox.parentNode.querySelector("p").style.textDecoration = "none";
+            }
+        }
+    document.querySelectorAll("nav a").forEach(element => {
+        element.addEventListener("click", () => {
+            element.style.color = "red";
+            setTimeout(() => {
+                element.style.color = "purple";
+            }, 1000)
+        })
+    })
+</script>

@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background:lavender;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+ul{
+    list-style: none;
+}
+nav{
+    padding:0 2rem;
+    font-size:x-large;
+    display: flex;
+    align-items: center;
+    position:sticky;
+    top:0;
+    flex:1;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    gap:3rem;
+}
+nav ul li{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+main{
+    display:flex;
+    flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    margin-top:3rem;
+    gap:5rem;
+    flex:6;
+}
+main>*{
+    display:flex;
+    flex-direction: column;
+    gap:3rem;
+    min-width:25%;
+}
+a{
+    text-decoration: none;
+    color:purple;
+}
+
+h1{
+    background:#a683e3;
+    padding:1rem;
+    text-align: center;
+    color:white;
+    text-transform: capitalize ;
+    font-size: 2.5rem;
+    box-shadow:0 0 3px black;
+    border-radius:10px;
+}
+main ul{
+    background:white;
+    border-radius:10px;
+    box-shadow: 5px 5px 15px -5px rgb(0, 0, 0,0.3);
+
+}
+
+main ul .item{
+    display:flex;
+    justify-content: start;
+    align-items: center;
+    gap:2rem;
+    font-size:1.5rem;
+    flex:1;
+    min-height: 70px;
+}
+li.item{
+    border-bottom:1px solid rgb(0,0,0,0.3);
+}
+li.item input{
+    margin:2rem;
+}
+main ul form input{
+    border:none;
+    outline:none;
+    -webkit-user-select: none;
+    user-select: none;
+    font-size:1.5rem;
+}
+main ul form input:focus {
+    border-bottom:2px solid #a683e3;
+}
+main button{
+    background-color: #a683e3;
+    padding:1rem;
+    border-radius: 50%;
+    font-size:2rem;
+    border:none;
+    color:white;
+    width:50px;
+    height:50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display:flex;
+    justify-content: space-between !important;
+    align-items: center;
+    margin:0 2rem;
+}
+footer{
+    font-size:1.3rem;
+    text-align: center;
+}
+input[type="checkbox"]{
+    transform:scale(1.5);
+}
+.list p{
+    font-size:1.7rem;
+}
+
+@media(max-width:472px){
+    input[type="text"]{
+        font-size:1rem;   
+    }
+    nav{
+        font-size:1.2rem;
+    }
+    main>*{
+        width:95%;
+    }
+    main ul .item{
+        min-height:65px !important;
+    }
+    h1{
+        font-size:1.7rem;
+    }
+    button{
+        transform: scale(0.8);
+    }
+    footer{
+        font-size:1.3rem;
+    }
+    
+}

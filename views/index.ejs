@@ -1,0 +1,34 @@
+<%- include("partials/header.ejs")%>
+
+    <main>
+        <div class="today" id="#today">
+            <h1>
+                <%= days[new Date().getDay()] %>,
+                    <%=months[new Date().getMonth()]%>
+                        <%=new Date().getDate()%>
+
+            </h1>
+            <div class="list">
+                <ul>
+                    <% if(locals.today){%>
+                        <% for(var i=0;i<today.length;i++){%>
+                            <li class="item"><input type="checkbox" id="today<%= i %>"  <%= today[i].checked ? 'checked' : '' %>>
+                                <p><%=today[i]%></p>
+                            </li>
+                            <%}%>
+                                <%}%>
+                                    <form action="/" method="POST" class="item">
+                                        <input type="text" placeholder="New Item" name="newItem">
+                                        <button type="submit" name="list" value="">+</button>
+                                    </form>
+                </ul>
+            </div>
+        </div>
+
+
+    </main>
+
+    <%- include("partials/footer.ejs")%>
+        </body>
+
+        </html>

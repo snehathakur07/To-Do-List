@@ -1,0 +1,31 @@
+<%- include("partials/header.ejs")%>
+
+    <main>
+        <div class="work" id="#work">
+            <h1>Work List
+            </h1>
+            <div class="list">
+                <ul>
+                    <% if(locals.work){%>
+                        <% for(var i=0;i<work.length;i++){%>
+                            <li class="item"><input type="checkbox" id="work<%= i %>" <%=work[i].checked ? 'checked' : ''
+                                    %>>
+                                <p>
+                                    <%=work[i]%>
+                                </p>
+                            </li>
+                            <%}%>
+                                <%}%>
+                                    <form action="/work" method="POST" class="item">
+                                        <input type="text" placeholder="New Item" name="newItem">
+                                        <button type="submit" name="list" value="">+</button>
+                                    </form>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <%- include("partials/footer.ejs")%>
+        </body>
+
+        </html>
