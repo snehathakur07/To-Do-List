@@ -82,7 +82,7 @@ li.item{
     border-bottom:1px solid rgb(0,0,0,0.3);
 }
 li.item input{
-    margin:2rem;
+    margin:2rem; 
 }
 main ul form input{
     border:none;
