@@ -13,7 +13,7 @@
                     <% if(locals.today){%>
                         <% for(var i=0;i<today.length;i++){%>
                             <li class="item"><input type="checkbox" id="today<%= i %>"  <%= today[i].checked ? 'checked' : '' %>>
-                                <p><%=today[i]%></p>
+                                <p><%=today[i].task%></p>
                             </li>
                             <%}%>
                                 <%}%>

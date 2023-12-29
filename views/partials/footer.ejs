@@ -6,7 +6,7 @@
     document.addEventListener("DOMContentLoaded", () => {
             const tasks = document.querySelectorAll(".list ul li input");
             tasks.forEach(checkbox => {
-                checkbox.checked = localStorage.getItem(checkbox.id) === 'true';
+                // checkbox.checked = localStorage.getItem(checkbox.id) === 'true';
                 updateCheckbox(checkbox);
                 checkbox.addEventListener('change', () => {
                     localStorage.setItem(checkbox.id, checkbox.checked);

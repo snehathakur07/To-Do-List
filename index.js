@@ -20,26 +20,28 @@ const monthNames = [
 
 
 app.get("/", (req, res) => {
+    console.log(today)
     res.render("index.ejs", {
         days: dayNames,
-        months:monthNames,
-        today:today
+        months: monthNames,
+        today: today
     })
 })
-app.get("/work",(req,res)=>{
-    res.render("work.ejs",{
-        work:work
+app.get("/work", (req, res) => {
+    res.render("work.ejs", {
+        work: work
     })
 })
 
 app.post("/", (req, res) => {
-    console.log(req.body.newItem+" added to today")
-    today.push(req.body.newItem)
+    console.log(req.body.newItem + " added to today")
+    today.push({ task: req.body.newItem, checked: false })
     res.redirect("/")
 })
 app.post("/work", (req, res) => {
-    console.log(req.body.newItem+" added to work")
-    work.push(req.body.newItem)
+    console.log(req.body.newItem + " added to work")
+    work.push({ task: req.body.newItem, checked: false })
+    console.log(work)
     res.redirect("/work")
 })
 app.listen(port, () => {
